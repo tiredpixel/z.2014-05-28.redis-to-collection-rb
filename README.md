@@ -1,0 +1,1 @@
+# redis-to-collection-rb
