@@ -1,6 +1,6 @@
 # Redis To Collection (Ruby)
 
-[![Gem Version](https://badge.fury.io/rb/redis-to-collection-rb.png)](http://badge.fury.io/rb/redis-to-collection-rb)
+[![Gem Version](https://badge.fury.io/rb/redis-to-collection.png)](http://badge.fury.io/rb/redis-to-collection)
 [![Code Climate](https://codeclimate.com/github/tiredpixel/redis-to-collection-rb.png)](https://codeclimate.com/github/tiredpixel/redis-to-collection-rb)
 
 [Redis](http://redis.io/) to a collection. There and back again.
@@ -19,7 +19,7 @@ More sleep lost by [tiredpixel](http://www.tiredpixel.com).
 
 Install using:
 
-    gem 'redis-to-collection-rb'
+    gem 'redis-to-collection'
 
 The default Ruby version supported is defined in `.ruby-version`.
 Any other versions supported are defined in `.travis.yml`.
