@@ -73,13 +73,20 @@ describe RedisToCollection::Dumpling do
     it "dumps SET" do
       @redis.sadd("canoe", ["Highbury", "Richmond", "Kew"])
       
-      @dumpling.dump.must_equal @container.merge({:data => [
+      dump1 = @dumpling.dump
+      dump2 = @container.merge({:data => [
         {
           :k => "canoe",
           :t => :e,
           :v => ["Highbury", "Richmond", "Kew"],
         },
       ]})
+      
+      # ignore internal order
+      dump1[:data] = dump1[:data].to_set
+      dump2[:data] = dump2[:data].to_set
+      
+      dump1.must_equal dump2
     end
     
     it "dumps ZSET" do

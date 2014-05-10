@@ -1,3 +1,5 @@
+require 'set'
+
 require_relative '../helper'
 require_relative '../../lib/redis-to-collection/loadling'
 
@@ -88,7 +90,7 @@ describe RedisToCollection::Loadling do
         
         @redis.keys.count.must_equal 1
         
-        @redis.smembers("canoe").must_equal ["Highbury", "Richmond", "Kew"]
+        @redis.smembers("canoe").to_set.must_equal ["Highbury", "Richmond", "Kew"].to_set
       end
       
       it "loads ZSET" do
