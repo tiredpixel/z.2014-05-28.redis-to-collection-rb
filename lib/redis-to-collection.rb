@@ -1,1 +1,1 @@
-require 'redis-to-collection/version'
+require_relative 'redis-to-collection/version'
