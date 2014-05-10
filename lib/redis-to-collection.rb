@@ -10,8 +10,8 @@ module RedisToCollection
     RedisToCollection::Dumpling.new(redis, pattern).dump
   end
   
-  def self.load(redis)
-    RedisToCollection::Loadling.new(redis).load
+  def self.load(redis, container)
+    RedisToCollection::Loadling.new(redis).load(container)
   end
   
 end
