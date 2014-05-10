@@ -141,6 +141,9 @@ describe RedisToCollection::Dumpling do
         e
       end
       
+      dump1[:data] = dump1[:data].to_set
+      dump2[:data] = dump2[:data].to_set
+      
       dump1.must_equal dump2
     end
     
