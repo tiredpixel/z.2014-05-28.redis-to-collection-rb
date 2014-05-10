@@ -1,6 +1,7 @@
 # Redis To Collection (Ruby)
 
 [![Gem Version](https://badge.fury.io/rb/redis-to-collection.png)](http://badge.fury.io/rb/redis-to-collection)
+[![Build Status](https://travis-ci.org/tiredpixel/redis-to-collection-rb.png?branch=master,stable)](https://travis-ci.org/tiredpixel/redis-to-collection-rb)
 [![Code Climate](https://codeclimate.com/github/tiredpixel/redis-to-collection-rb.png)](https://codeclimate.com/github/tiredpixel/redis-to-collection-rb)
 
 [Redis](http://redis.io/) to a collection. There and back again.
