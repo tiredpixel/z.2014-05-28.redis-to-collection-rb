@@ -83,8 +83,8 @@ describe RedisToCollection::Dumpling do
       ]})
       
       # ignore internal order
-      dump1[:data] = dump1[:data].to_set
-      dump2[:data] = dump2[:data].to_set
+      dump1[:data].map! { |e| e[:v] = e[:v].to_set ; e }
+      dump2[:data].map! { |e| e[:v] = e[:v].to_set ; e }
       
       dump1.must_equal dump2
     end
@@ -130,8 +130,16 @@ describe RedisToCollection::Dumpling do
       ]})
       
       # ignore internal order
-      dump1[:data] = dump1[:data].to_set
-      dump2[:data] = dump2[:data].to_set
+      
+      dump1[:data].map! do |e|
+        e[:v] = e[:v].to_set if e[:v].respond_to?(:to_set)
+        e
+      end
+      
+      dump2[:data].map! do |e|
+        e[:v] = e[:v].to_set if e[:v].respond_to?(:to_set)
+        e
+      end
       
       dump1.must_equal dump2
     end
@@ -156,8 +164,8 @@ describe RedisToCollection::Dumpling do
       dump1[:data].count.must_equal 1
       
       # ignore internal order
-      dump1[:data].first[:v] = dump1[:data].first[:v].to_set
-      dump2[:data].first[:v] = dump2[:data].first[:v].to_set
+      dump1[:data].map! { |e| e[:v] = e[:v].to_set ; e }
+      dump2[:data].map! { |e| e[:v] = e[:v].to_set ; e }
       
       dump1.must_equal dump2
     end
