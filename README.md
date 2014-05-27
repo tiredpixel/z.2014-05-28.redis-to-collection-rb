@@ -185,12 +185,18 @@ on GitHub. And don't forget you can become a [stargazer](https://github.com/tire
 ## Contributions
 
 Contributions are embraced with much love and affection!
-Please fork the repository and wizard your magic.
+Please fork the repository and wizard your magic, preferably with plenty of
+fairy-dust sprinkled over the tests. ;)
 Then send me a pull request. Simples!
 If you'd like to discuss what you're doing or planning to do, or if you get
 stuck on something, then just wave. :)
 
 Do whatever makes you happy. We'll probably still like you. :)
+
+Tests are written using [minitest](https://github.com/seattlerb/minitest),
+which is included by default in Ruby 1.9 onwards. To run all tests:
+
+    rake test
 
 
 ## Blessing
